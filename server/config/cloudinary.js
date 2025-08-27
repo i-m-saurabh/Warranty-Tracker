@@ -29,6 +29,7 @@ const storage = new CloudinaryStorage({
   params: {
     folder: 'warranty-tracker', // name of the folder in cloudinary
     allowed_formats: ['jpg', 'jpeg', 'png', 'pdf'], // supported files
+    access_mode: 'public',
     // public_id transformation to make filenames unique
     public_id: (req, file) => `${file.fieldname}-${Date.now()}`,
   },
